@@ -2,14 +2,20 @@
 version: 2
 
 models:
-  - name: my_first_dbt_model
-    description: "A starter dbt model"
+  - name: fastfoods
+    description: "Record containing province and province code as columns."
     columns:
-      - name: id
-        description: "The primary key for this table"
+      - name: province_name
+        description: "The name of the provinces needs to be unique"
         tests:
           - unique
           - not_null
+      
+      - name: province_code
+        description: 'The province-code for each province is unique'
+        tests:
+          - unique
+          - not_null  
 
   - name: my_second_dbt_model
     description: "A starter dbt model"
