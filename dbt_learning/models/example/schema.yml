@@ -16,6 +16,20 @@ models:
         tests:
           - unique
           - not_null  
+      
+  - name: restaurant_age
+    description: "Categorizing the restaurant according to the number of built years."
+    columns:
+      - name: restaurant_age
+        desctiption: 'Age of the restaurant.'
+        tests:
+          - not_null
+      - name: restaurant_category
+        tests:
+          - accepted_values: 
+              values: ['Middle aged restaurant.', 'Newly established restaurant.', 'Old restaurant.']
+  
+
 
   - name: my_second_dbt_model
     description: "A starter dbt model"
