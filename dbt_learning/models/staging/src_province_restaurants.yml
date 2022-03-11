@@ -1,0 +1,18 @@
+version: 2
+
+sources:
+  - name: fastfood
+    database: fastfood
+    schema: dev_pizzastore
+    tables:
+      - name: province
+        columns:
+          - name: country
+            tests: 
+              - not_null
+
+      - name: restaurants
+        columns:
+          - name: id
+            tests: 
+              - not_null

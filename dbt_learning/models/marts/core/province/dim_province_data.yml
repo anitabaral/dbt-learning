@@ -1,0 +1,14 @@
+version: 2
+
+models:
+  - name: dim_province_data
+    columns: 
+      - name: province_name
+        tests:
+          - not_null
+          - unique
+          
+      - name: province_code
+        tests:
+          - not_null
+          - unique      
