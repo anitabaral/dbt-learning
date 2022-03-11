@@ -1,0 +1,30 @@
+version: 2
+
+models:
+  - name: stg_restaurants
+    columns: 
+      - name: restaurant_name
+        tests:
+          - not_null
+
+      - name: province_code
+        tests:
+          - not_null
+
+      - name: date_added
+        tests:
+          - not_null
+
+      - name: date_updated
+        tests:
+
+  - name: stg_province
+    columns: 
+      - name: province_name
+        tests:
+          - not_null
+    
+    # columns: 
+    # - name: state_code
+    #   tests:
+    #     - not_null
